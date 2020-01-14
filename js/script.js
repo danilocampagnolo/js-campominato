@@ -1,30 +1,45 @@
-// generare 16 numeri casuali da 1 a 100
-var arrayGenerati = [];
-for (var i = 0; i < 16; i++) {
-  arrayGenerati.push(Math.floor(Math.random() * 100) + 1);
-}
-console.log(arrayGenerati);
-// chiedere all'utente di inserire per 84 volte un numero da 1 a 100
 var userNumber = 0;
-var trovato = false;
-var i = 0;
+var arrayGenerati = [];
 
-while (i < 84 && trovato == false) {
-  userNumber = parseInt(prompt("inserisci un numero"));
-  // se numero inserito è presente nella lista di numeri generati, partita termina, altrimenti chiede un altro numero
-  j = 0;
-  while (j < arrayGenerati.length && trovato == false ) {
-    if (userNumber == arrayGenerati[j]) {
-      trovato = true;
-    }
-    j++
+while (arrayGenerati.length < 16) {
+  var estratto = getRandomNumber(1, 100);
+  if (arrayGenerati.includes(estratto) == false ) {
+    arrayGenerati.push(estratto);
   }
-  i++;
 }
-console.log(i - 1);
-console.log(trovato);
+
+console.log(arrayGenerati);
+
+if (campoMinato(arrayGenerati, userNumber) == true) {
+  console.log(i);
+}
+else {
+  console.log(i);
+}
 
 
-// condizione di fine partita: il giocatore inserisce un numero “vietato”, ovvero presente nella lista di numeri random, o raggiunge il numero massimo possibile di tentativi consentiti.
+function campoMinato(array, userNumber) {
+  var trovato = false;
+  i = 0;
 
-// risultato: il software deve comunicare il punteggio, cioè il numero di volte che l’utente ha inserito un numero consentito.
+  while (i < 84 && trovato == false) {
+    userNumber = parseInt(prompt("inserisci un numero"));
+    j = 0;
+    while (j < arrayGenerati.length && trovato == false ) {
+      if (userNumber == arrayGenerati[j]) {
+        trovato = true;
+        return true;
+      }
+      j++
+    }
+    i++;
+  }
+  return false;
+}
+
+function getRandomNumber(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  var random = Math.floor(Math.random() * (max - min + 1)) + min;
+  return random;
+}
