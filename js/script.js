@@ -1,4 +1,5 @@
 var userNumber = 0;
+
 var arrayGenerati = [];
 
 while (arrayGenerati.length < 16) {
@@ -7,7 +8,6 @@ while (arrayGenerati.length < 16) {
     arrayGenerati.push(estratto);
   }
 }
-
 console.log(arrayGenerati);
 
 if (campoMinato(arrayGenerati, userNumber) == true) {
@@ -16,7 +16,6 @@ if (campoMinato(arrayGenerati, userNumber) == true) {
 else {
   console.log(i);
 }
-
 
 function campoMinato(array, userNumber) {
   var trovato = false;
