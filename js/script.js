@@ -21,6 +21,7 @@ while (i < 84 && trovato == false) {
   }
   i++;
 }
+console.log(i - 1);
 console.log(trovato);
 
 
