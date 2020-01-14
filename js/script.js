@@ -17,6 +17,8 @@ else {
   console.log(i);
 }
 
+// ============================ FUNZIONI
+
 function campoMinato(array, userNumber) {
   var trovato = false;
   i = 0;
