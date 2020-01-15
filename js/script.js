@@ -45,7 +45,9 @@
 //   return random;
 // }
 
-// ======================================== CORREZIONE
+// ===================================================================
+// ========================= CORREZIONE ==============================
+// ===================================================================
 
 // genero 16 numeri casuali non identici da 1 a 100 e li salvo
 var numberBomb = [];
@@ -117,16 +119,9 @@ while (numbersUser.length < numberPrompt && findBomb == false) {
   }
 }
 console.log(numbersUser);
+// comunico punteggio finale
 console.log(message + " " + points);
 
-
-
-
-
-
-// termino le richieste quando arrivo a 84
-
-// comunico punteggio finale
 
 // ============================= FUNZIONI
 // funzione che genera numeri
@@ -136,9 +131,6 @@ function getRandomNumber(numMin, numMax) {
   var result = Math.floor(Math.random() * (numMax - numMin + 1)) + numMin;
   return result;
 }
-
-// var numeroRandom = getRandomNumber(1, 100);
-// console.log(numeroRandom);
 
 // funzione che cerca in un array
 function isInArray(array, element) { //uguale a .includes()
