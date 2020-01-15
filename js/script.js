@@ -94,8 +94,8 @@ else if (difficulty == 2) {
   numMaxCheck = 50;
 }
 
-// prendo il numero elo confronto con tutti i numeri casuali generati prima
-// chiedere 84(5 per testare) volte l'inserimento dei numeri da 1 a 100
+// prendo il numero e lo confronto con tutti i numeri casuali generati prima
+// chiedere 84 volte l'inserimento dei numeri da 1 a 100
 var findBomb = false;
 while (numbersUser.length < numberPrompt && findBomb == false) {
 
