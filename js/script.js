@@ -94,18 +94,16 @@ else if (difficulty == 2) {
   numMaxCheck = 50;
 }
 
-// prendo il numero e lo confronto con tutti i numeri casuali generati prima
-// chiedere 84 volte l'inserimento dei numeri da 1 a 100
+// chiedere tot. volte l'inserimento dei numeri da 1 a 100
 var findBomb = false;
 while (numbersUser.length < numberPrompt && findBomb == false) {
 
-  // se il numero non è presente vado avanti achiedere altri numeri
   // controllo se numero è tra min e max
   do {
     var userNumber = parseInt(prompt("inserisci un numero da 1 a 100"));
   } while (checkRangeNumber(numMinCheck, numMaxCheck, userNumber) == false);
 
-
+  // se il numero non è presente vado avanti a chiedere altri numeri
   if (isInArray(numbersUser, userNumber) == false) {
     numbersUser.push(userNumber);
     // se il numero è presente nella lista blocco il gioco, ha perso
