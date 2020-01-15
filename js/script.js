@@ -49,11 +49,11 @@
 // ========================= CORREZIONE ==============================
 // ===================================================================
 
-// genero 16 numeri casuali non identici da 1 a 100 e li salvo
 var numberBomb = [];
-    // controllo che il numero non è già presente nell'array numberBomb
+// genero 16 numeri casuali non identici da 1 a 100 e li salvo
 while (numberBomb.length < 16) {
   var numberRandom = getRandomNumber(1, 100);
+  // controllo che il numero non è già presente nell'array numberBomb
   var find = isInArray(numberBomb, numberRandom); //true o false
   if (find == false) {
       numberBomb.push(numberRandom);
@@ -61,11 +61,11 @@ while (numberBomb.length < 16) {
 }
 console.log(numberBomb);
 
-    // array per i numeri generati dall'utente
+// array per i numeri generati dall'utente
 var numbersUser =[];
-    // variabile per il numero di tentativi
+// variabile per il numero di tentativi
 var numberPrompt = 84;
-    // variabile punteggio
+// variabile punteggio
 var points = 0;
 // messaggio standard
 var message = "hai vinto";
@@ -96,7 +96,7 @@ else if (difficulty == 2) {
   numMaxCheck = 50;
 }
 
-// chiedere tot. volte l'inserimento dei numeri da 1 a 100
+// chiedere tot. volte l'inserimento dei numeri da 1 a tot.
 var findBomb = false;
 while (numbersUser.length < numberPrompt && findBomb == false) {
 
@@ -121,7 +121,6 @@ while (numbersUser.length < numberPrompt && findBomb == false) {
 console.log(numbersUser);
 // comunico punteggio finale
 console.log(message + " " + points);
-
 
 // ============================= FUNZIONI
 // funzione che genera numeri
