@@ -47,12 +47,9 @@
 
 // ======================================== CORREZIONE
 
-
-
 // genero 16 numeri casuali non identici da 1 a 100 e li salvo
 var numberBomb = [];
-
-// generiamo un numero finchè il numero non è già presente nell'array numberBomb
+    // controllo che il numero non è già presente nell'array numberBomb
 while (numberBomb.length < 16) {
   var numberRandom = getRandomNumber(1, 100);
   var find = isInArray(numberBomb, numberRandom); //true o false
@@ -61,6 +58,7 @@ while (numberBomb.length < 16) {
   }
 }
 console.log(numberBomb);
+
     // array per i numeri generati dall'utente
 var numbersUser =[];
     // variabile per il numero di tentativi
@@ -70,28 +68,27 @@ var points = 0;
 // messaggio standard
 var message = "hai vinto";
 
-
-// controllo difficoltà
+// var controllo difficoltà
 var numMinCheck;
 var numMaxCheck;
 
 // controllo valore difficoltà
-var tentativiDifficolta = 0;
+var difficultyInput = 0;
 do {
-  var difficolta = parseInt(prompt("inserisci difficoltà: da 0 a 2"));
-  tentativiDifficolta++;
-} while (checkRangeNumber(0, 2, difficolta) == false && tentativiDifficolta < 3);
+  var difficulty = parseInt(prompt("inserisci difficoltà: da 0 a 2"));
+  difficultyInput++;
+} while (checkRangeNumber(0, 2, difficulty) == false && difficultyInput < 3);
 
-if (difficolta == 0) {
+if (difficulty == 0) {
   numberPrompt = 84;
   numMinCheck = 1;
   numMaxCheck = 100;
-} else if (difficolta == 1) {
+} else if (difficulty == 1) {
   numberPrompt = 64;
   numMinCheck = 1;
   numMaxCheck = 80;
 }
-else if (difficolta == 2) {
+else if (difficulty == 2) {
   numberPrompt = 34;
   numMinCheck = 1;
   numMaxCheck = 50;
